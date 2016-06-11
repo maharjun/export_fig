@@ -16,7 +16,7 @@ def SetupExportFig():
     if not os.path.isdir(BuildDir):
         os.mkdir(BuildDir)
     with changedDir(BuildDir):
-        with open(os.path.join(BuildDir, 'ModulePath.txt')) as ModulePathFile:
+        with open(os.path.join(BuildDir, 'ModulePath.txt'), 'w') as ModulePathFile:
             ModulePathFile.write(CurrentScriptDir)
 
     return True
